@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.svg">
+
+    <!-- TODO: Add your Google Analytics Setup -->
+
+    <!-- EXAMPLE: using Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      // You should use those functions in cookie.js
+      // gtag('js', new Date());
+      // gtag('config', 'G-XXXXXXXX', { 'send_page_view': false });
+    </script> -->
+  </head>
+  <body>
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+    {% include cursor.html %}
+  </body>
+  <script src="/assets/js/cookie.js"></script>
+  <script src="/assets/js/animation.js"></script>
+  <script src="/assets/js/cursor.js"></script>
+</html>

@@ -1,0 +1,8 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Remove for github pages
+# The github-pages gem strictly versions dependencies, rendering versioning the lockfile unnecessary, and potentially could result in using outdated gem versions.
+Gemfile.lock
