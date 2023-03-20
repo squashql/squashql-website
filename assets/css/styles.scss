@@ -391,7 +391,8 @@ footer {
   .second {
     grid-column: 15 / span 3;
   }
-  li {
+  li, a {
+    text-decoration: none;
     list-style-type: none;
     color: #929292;
     font-weight: 500;
