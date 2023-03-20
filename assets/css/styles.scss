@@ -262,24 +262,31 @@ main {
     .info-wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
+      align-items: flex-start;
       width: 490px;
       height: 490px;
       background: #232323;;
       border-radius: 26px;
+      padding: 40px;
+
+      img {
+        max-width: 80px;
+        margin-bottom: 30px;
+      }
 
       p {
         font-weight: 800;
-        font-size: 40px;
+        font-size: 34px;
         line-height: 45px;
-        margin: 35px 0 20px;
+        margin: 25px 0 20px;
+        text-align: left;
       }
       span {
         font-weight: 400;
-        font-size: 30px;
-        line-height: 45px;
-        text-align: center;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: left;
       }
     }
   }
