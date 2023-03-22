@@ -13,7 +13,6 @@ $white: #fff;
   box-sizing: border-box;
 }
 html, body {
-  cursor: none;
   background: $primary;
   width: 100%;
   height: 100vh;
@@ -30,34 +29,6 @@ h1, h2, h3, a, p, span, li, button {
   font-family: 'Poppins';
   font-style: normal;
   color: $white;
-}
-
-.cursor {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  border: 1px solid $secondary;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s linear;
-  z-index: 999;
-}
-.cursor2 {
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  background-color: $secondary;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-  z-index: 999;
-}
-.cursor2.active {
-  background-color: #ffc232b9;
-  width: 50px;
-  height: 50px;
 }
 .row, .col {
   display: flex;
@@ -87,7 +58,6 @@ header {
     justify-content: flex-end;
 
     a {
-      cursor: none;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -114,14 +84,13 @@ main {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  gap: 1.6vw;
 
   .section-1 {
     grid-column: 4 / span 15;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-gap: 10px;
-    padding-top: 190px;
+    padding: 180px 0 20px;
 
     .left {
       grid-column: 1 / span 10;
@@ -131,8 +100,8 @@ main {
       
       p, b {
         font-weight: 400;
-        font-size: 70px;
-        line-height: 83px;
+        font-size: 63px;
+        line-height: 76px;
         letter-spacing: -0.02em;
         margin: 0;
       }
@@ -153,7 +122,6 @@ main {
         letter-spacing: 0.03em;
       }
       .watch-our-tutorial-btn {
-        cursor: none;
         position: relative;
         display: flex;
         justify-content: center;
@@ -206,13 +174,18 @@ main {
       justify-content: flex-end;
 
       .info-container {
-        width: 460px;
+        width: 502px;
         height: 96px;
         background: #232323;
         border-radius: 100px;
         margin-top: 44px;
         gap: 20px;
-        padding: 0 47px;
+        padding: 0 47px 0 0;
+        justify-content: flex-start;
+
+        img {
+          margin-left: 47px;
+        }
 
         .col {
           flex: 1 0 auto;
@@ -241,12 +214,12 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 140px 0;
+    padding: 80px 0;
 
     p {
       font-weight: 700;
-      font-size: 93px;
-      line-height: 96px;
+      font-size: 73px;
+      line-height: 76px;
       letter-spacing: -0.02em;
       text-align: center;
     }
@@ -257,12 +230,12 @@ main {
       align-items: flex-start;
       gap: 20px;
       width: 100%;
-      margin-top: 100px;
+      margin-top: 80px;
     }
     .info-wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-start;
       width: 490px;
       height: 490px;
@@ -284,8 +257,8 @@ main {
       }
       span {
         font-weight: 400;
-        font-size: 24px;
-        line-height: 26px;
+        font-size: 22px;
+        line-height: 30px;
         text-align: left;
       }
     }
@@ -321,7 +294,7 @@ main {
       align-items: center;
 
       .discord-btn, .github-btn {
-        // cursor: pointer;
+        cursor: pointer;
         width: 345px;
         height: 58px;
         border: 1px solid $secondary;
@@ -340,7 +313,7 @@ main {
 
       }
       .hover-btn {
-        cursor: none;
+        position: relative;
         text-decoration: none;
         overflow: hidden;
         span {
@@ -414,6 +387,9 @@ footer {
     font-weight: 600px;
     margin-bottom: 32px;
   }
+  li a:hover {
+    color: $white;
+  }
 }
 
 #cookie-container {
@@ -448,7 +424,6 @@ footer {
     gap: 12px;
 
     button {
-      cursor: none;
       width: 90px;
       height: 50px;
       border-radius: 13.755px 27.5101px 27.5101px 13.755px;
@@ -471,12 +446,6 @@ footer {
   main {
     .section-1 {
       grid-column: 3 / span 16;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      p {
-        text-align: center;
-      }
     }
     .section-2 {
       grid-column: 3 / span 16;
@@ -490,6 +459,23 @@ footer {
     }
   }
 }
+@media screen and (max-width: 1200px) {
+  main {
+    .section-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-column: 3 / span 16;
+      padding-bottom: 0px;
+      p {
+        text-align: center;
+      }
+      .right {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
 // Tablet responsive
 @media screen and (max-width: 1024px) {
   main {
@@ -497,6 +483,7 @@ footer {
       .right {
         width: 100%;
         align-items: center;
+        margin-bottom: 8px;
 
         .watch-our-tutorial-btn {
           width: 330px;
